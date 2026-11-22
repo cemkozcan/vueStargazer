@@ -1,0 +1,63 @@
+export const constellations = [
+  {
+    id: 'cygnus',
+    name: 'Cygnus',
+    subtitle: 'The Swan',
+    description: 'The Swan',
+    x: 360,
+    y: 380,
+    color: '#f0c879',
+    stars: [
+      { name: 'Deneb', x: 0, y: -108, size: 8 },
+      { name: 'Sadr', x: 2, y: -18, size: 6 },
+      { name: 'Gienah', x: -84, y: 56, size: 5 },
+      { name: 'Delta Cygni', x: 87, y: 54, size: 5 },
+      { name: 'Albireo', x: 0, y: 126, size: 6 },
+    ],
+    connections: [[0, 1], [1, 2], [1, 3], [1, 4]],
+  },
+  {
+    id: 'orion',
+    name: 'Orion',
+    subtitle: 'The Hunter',
+    description: 'The Hunter',
+    x: 830,
+    y: 610,
+    color: '#ef8b76',
+    stars: [
+      { name: 'Betelgeuse', x: -110, y: -112, size: 7 },
+      { name: 'Bellatrix', x: 108, y: -112, size: 6 },
+      { name: 'Meissa', x: 0, y: -168, size: 5 },
+      { name: 'Mintaka', x: -42, y: 0, size: 5 },
+      { name: 'Alnilam', x: 0, y: 8, size: 6 },
+      { name: 'Alnitak', x: 43, y: 16, size: 5 },
+      { name: 'Saiph', x: -82, y: 128, size: 6 },
+      { name: 'Rigel', x: 92, y: 128, size: 8 },
+    ],
+    connections: [[2, 0], [2, 1], [0, 3], [3, 4], [4, 5], [1, 5], [3, 6], [5, 7], [6, 7]],
+  },
+  {
+    id: 'cassiopeia',
+    name: 'Cassiopeia',
+    subtitle: 'The Queen',
+    description: 'The Queen',
+    x: 1250,
+    y: 300,
+    color: '#8fd5c3',
+    stars: [
+      { name: 'Schedar', x: -150, y: 14, size: 7 },
+      { name: 'Caph', x: -82, y: -72, size: 6 },
+      { name: 'Gamma Cas', x: 0, y: 8, size: 6 },
+      { name: 'Ruchbah', x: 76, y: -72, size: 5 },
+      { name: 'Segin', x: 150, y: 16, size: 5 },
+    ],
+    connections: [[0, 1], [1, 2], [2, 3], [3, 4]],
+  },
+]
+
+export const backgroundStars = Array.from({ length: 160 }, (_, index) => ({
+  x: (index * 173 + 41) % 1600,
+  y: (index * 97 + 53) % 1000,
+  size: index % 11 === 0 ? 2 : 1,
+  opacity: 0.18 + ((index * 7) % 6) * 0.08,
+}))
