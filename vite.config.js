@@ -12,10 +12,9 @@ export default defineConfig({
     vueJsx(),
     tailwindcss(),
   ],
-  base: '/vite-deploy-demo/',
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url)),
+      '@': fileURLToPath(new URL('./vueStargazer/src', import.meta.url)),
     },
   },
 })
